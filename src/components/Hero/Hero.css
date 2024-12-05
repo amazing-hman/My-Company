@@ -1,0 +1,201 @@
+.app{
+    height: 140vh;
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Darker text for better contrast */
+    background-color: #F2F2F2;
+}
+
+.hero {
+    min-height: 90vh;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 70%, #0b0d29 100%), 
+                url(../../assets/images/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden !important;
+    padding: 20px;
+  }
+
+
+.hero h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.hero-service-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -35vh); /* Center horizontally and vertically */
+    width: 90%;
+    gap: 2rem;
+    z-index: 2; /* Ensure it overlays above the image but below hero text if needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.hero-service-card-container p, li, span, a {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.text-contrast {
+    color: rgba(255, 255, 255, 0.9); /* Softer white for better blending */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow for contrast */
+}
+  
+.hero h1 {
+    color: #fff;
+    font-size: 5.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2{
+    color: #e0e0e0;
+    font-size: 3rem;
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 35px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    width: 16rem;
+    height: 25rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    font-weight: lighter;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom right, #e0e8ff, #ffffff);
+}
+
+.card .icon {
+    width: 100px; /* Adjust size */
+    height: 100px; /* Ensure width and height are equal */
+    border-radius: 50%; /* Makes the image round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Optional background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+  
+ 
+.card h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: Helvetica;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    font-weight: 0;
+    color: #333;
+    transition: color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+  
+/* Add subtle animations for modern feel */
+@media (hover: hover) {
+.card {
+    animation: slideUp 0.5s ease-out;
+}
+}
+
+@keyframes slideUp {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1255px) {
+    .app{
+        height: 200vh;
+        font-family: 'Roboto', sans-serif;
+        color: #333; /* Darker text for better contrast */
+        background-color: #F2F2F2;
+    }
+}
+    
+/* Responsive Adjustments */
+@media (max-width: 935px) {
+    .app{
+        height: 230vh;
+        font-family: 'Roboto', sans-serif;
+        color: #333; /* Darker text for better contrast */
+        background-color: #F2F2F2;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-top: 0px;
+    }
+    .hero-service-card-container {
+        gap: 20px;
+    }
+    .app{
+        height: 280vh;
+        font-family: 'Roboto', sans-serif;
+        color: #333; /* Darker text for better contrast */
+        background-color: #F2F2F2;
+    }
+}

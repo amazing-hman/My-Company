@@ -1,0 +1,94 @@
+.stat-box-container {
+  display: flex; /* Enables alignment in a row */
+  justify-content: space-between; /* Space between cards */
+  align-items: center; /* Vertically centers items */
+  flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+  gap: 2rem; /* Adds space between the cards */
+  max-width: 80%; /* Adjust container width */
+  margin: 2rem auto; /* Centers the container */
+}
+
+/* Styling for individual cards */
+.stat-box {
+  flex: 1; /* Cards take up equal space */
+  min-width: 5rem; /* Ensures minimum size for smaller screens */
+  max-width: 7rem; /* Prevents excessive width */
+  height: 6rem;
+  text-align: center; /* Centers text within the cards */
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+/* Hover effects */
+.stat-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-box.curved {
+  transform: rotate(10deg);
+}
+  
+
+/* Icon styling */
+.stat-box-icon {
+  font-size: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Statistic number */
+.stat-box-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Statistic description */
+.stat-box-description {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+
+/* Optional for curved alignment */
+.curved-alignment {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  transform: rotate(-10deg);
+}
+
+
+
+
+/* Specific alignment for the first row */
+.stat-box:first-child {
+  align-self: flex-start; /* Aligns the first card to the top */
+}
+
+/* Specific alignment for the second row */
+.stat-box:nth-child(2) {
+  align-self: center; /* Centers the middle card vertically */
+}
+
+/* Specific alignment for the third row */
+.stat-box:last-child {
+  align-self: flex-end; /* Aligns the last card to the bottom */
+}
+
+
+/* Dynamic animation for counting */
+@keyframes count-up {
+  from {
+    content: "0";
+  }
+  to {
+    /* Final value will be dynamically applied */
+  }
+}

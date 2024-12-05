@@ -1,0 +1,99 @@
+.home {
+    height: 50px;
+    width: 100;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #0b0d29 100%), 
+                url(../assets/images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p, li, span, a {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.text-contrast {
+    color: rgba(255, 255, 255, 0.9); /* Softer white for better blending */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow for contrast */
+}
+
+
+.home h1{
+    color: #fff;
+    font-size: 5.5rem;
+}
+
+.home h2{
+    color: #e0e0e0;
+    font-size: 3rem;
+}
+
+.section-overlay {
+    position: relative;
+}
+
+.section-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.section-overlay * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.home .wave{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height: 9rem;
+    width: 100%;
+    background: url(../assets/images/wave1.png);
+                
+    background-size: 100rem 9rem;
+    animation: waves 8s linear infinite;
+    background-repeat: repeat-x;
+    z-index: 2;
+}
+
+.home .wave2{
+    animation-direction: reverse;
+    animation-duration: 6s;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.home .wave3{
+    animation-duration: 4s;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+
+@keyframes waves{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
